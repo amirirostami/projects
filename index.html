@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>mashin.ir</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+</head>
+
+<body style="height: 3000px;">
+
+
+
+
+
+
+
+
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card p-3" style="background-color: #f0f0f0 ; border: none; box-shadow: 0 0 15px black;">
+                    <input type="text" class="form-control text-end mb-3 fs-4" placeholder="0" id="display" readonly />
+
+
+                    <div class="row g-2">
+
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('7')">7</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('8')">8</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('9')">9</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-warning w-100" onclick="piplain('*')">×</button></div>
+
+
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('4')">4</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('5')">5</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('6')">6</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-warning w-100" onclick="piplain('-')">−</button></div>
+
+
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('1')">1</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('2')">2</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('3')">3</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-warning w-100" onclick="piplain('+')">+</button></div>
+
+
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('0')">0</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-secondary w-100" onclick="piplain('.')">.</button>
+                        </div>
+                        <div class="col-3"><button class="btn btn-success w-100" onclick="mosaviii()">=</button></div>
+                        <div class="col-3"><button class="btn btn-warning w-100" onclick="piplain('/')">÷</button></div>
+
+
+                        <div class="col-6"><button class="btn btn-danger w-100" onclick="pakki()">C</button></div>
+                        <div class="col-6"><button class="btn btn-dark w-100" onclick="ooops()">⌫</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center align-items-center">
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        ورود به حساب
+                    </button>
+
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">فرم اعتبار سنجی</h1>
+                                    <button type="button" class="btn-close clll" data-bs-dismiss="modal"
+                                        aria-label="Close" style="margin-right: 6px;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="login-form">
+                                        <div class="mb-3">
+                                            <label for="email" class="col-form-label">ایمیل :</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="amir123@gmail.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="col-form-label">رمز عبور :</label>
+                                            <input type="password" class="form-control" id="password">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">بستن</button>
+                                            <button id="btn-sub" type="submit" class="btn btn-primary">ورود</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+    </section>
+
+
+
+
+
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <div class="input-group mb-3">
+                        <input id="inp" type="text" class="form-control" placeholder="کار جدید">
+                        <button id="btn-jub" type="button" class="btn btn-outline-primary">ثبت کردن</button>
+                    </div>
+                    <ul id="taskList" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="text-center"
+                    style="color: #ff9300; text-shadow: 0px 0px 2px #ff9300;font-size: 50px;font-weight: 900;">BMI</h2>
+                <div class="col-md-4">
+                    <form id="form-num">
+                        <div class="mb-3">
+                            <label for="weight" class="form-label">وزن(کیلوگرم)</label>
+                            <input type="number" class="form-control" id="weight" placeholder=" کیلوگرم 80" min="0">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="height" class="form-label">قد(سانتی متر)</label>
+                            <input type="number" class="form-control" id="height" placeholder="185 سانتی متر" min="0">
+                        </div>
+
+                        <button type="submit" id="btn00" class="btn btn-info">ثبت کردن</button>
+                    </form>
+                    <br>
+                    <div id="divv"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+
+                <div class="card shadow-lg p-4" style="width: 400px;">
+                    <h3 class="text-center mb-4">💱 ماشین حساب هزینه سفر</h3>
+
+                    <div class="mb-3">
+                        <label for="distance" class="form-label">مسافت (کیلومتر)</label>
+                        <input type="number" class="form-control" id="distance" min="0" placeholder="مثلاً 100">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="consumption" class="form-label">مصرف سوخت (در هر 100 کیلومتر)</label>
+                        <input type="number" class="form-control" id="consumption" min="0" placeholder="مثلاً 8 لیتر">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="price" class="form-label">قیمت هر لیتر بنزین (تومان)</label>
+                        <input type="number" class="form-control" id="price" min="0" placeholder="مثلاً 3000 ">
+                    </div>
+
+
+                    <button id="canvermohaseb" class="btn btn-primary w-100">محاسبه</button>
+
+                    <div id="javab" class="mb-5"></div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card shadow-lg p-4" style="width: 400px;">
+                    <h3 class="text-center mb-4">💱 مبدل ارز</h3>
+
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">مبلغ به تومان</label>
+                        <input type="text" class="form-control" id="amount" placeholder="مثلاً 10,000">
+                    </div>
+
+                    <button id="convertBtn" class="btn btn-primary w-100">محاسبه</button>
+
+                    <div class="mt-4" id="results" style="display: none;">
+                        <p>💵 دلار: <span id="usd"></span></p>
+                        <p>💶 یورو: <span id="eur"></span></p>
+                        <p>🇦🇪 درهم: <span id="aed"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+    <script src="/index.js"></script>
+
+
+</body>
+
+</html>
