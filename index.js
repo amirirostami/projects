@@ -327,3 +327,17 @@ function toEnglishDigits(str) {
 
 
 
+
+
+
+
+
+
+let h1 = document.getElementById("brand");
+h1.addEventListener("mouseover" ,function() {
+  h1.style.color = "#6C63FF";
+});
+
+h1.addEventListener("mouseout",function() {
+  h1.style.color = "black";
+});
