@@ -26,6 +26,44 @@ function ooops() {
 }
 
 
+document.addEventListener("keydown", function (e) {
+  const key = e.key;
+
+
+
+  // پیدا کردن دکمه‌ای که متنش با کلید یکیه
+  const btn = [...document.querySelectorAll("button")].find(
+    b => b.innerText === key || 
+    (b.innerText === "×" && key === "*") ||
+    (b.innerText === "÷" && key === "/")
+  );
+
+  // اگر دکمه‌ای پیدا شد هایلایتش کن
+  if (btn) {
+    btn.classList.add("key-active");
+    setTimeout(() => btn.classList.remove("key-active"), 150);
+  }
+
+
+  if (/^[0-9+\-*/.]$/.test(key)) {
+    piplain(key);
+  }
+
+  
+  if (key === "Enter" || key === "=") {
+    mosaviii();
+  }
+
+  
+  if (key === "Backspace") {
+    ooops();
+  }
+
+  
+  if (key === "Escape") {
+    pakki();
+  }
+});
 
 
 

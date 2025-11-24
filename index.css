@@ -1,0 +1,5 @@
+.key-active {
+  transform: scale(1.08);
+  background-color: #ffc20c !important;
+  transition: 0.1s;
+}
